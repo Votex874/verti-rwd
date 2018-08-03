@@ -1,0 +1,149 @@
+@mixin button2($color, $fontColor){
+  width: 90%;
+  margin: 5px auto;
+  background-color: $color;
+  height: 3rem;
+  font-weight: bold;
+  color: $fontColor;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+section.maxWidth {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  .text {
+    width: 90%;
+    text-align: center;
+    h3 {
+      padding: 15px 0;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding: 5px 10px;
+      color: grey;
+      text-align: center;
+    }
+  }
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    button:nth-of-type(1) {
+      @include button2(#3385ff, white);
+    }
+    button:nth-of-type(2) {
+      @include button2(#e6e6e6, #262626);
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1040px){
+  section.maxWidth{
+    display: flex;
+    flex-direction: row;
+    .text{
+      padding: 3rem 0;
+      width: 60%;
+      margin-left: 5%;
+      h3{
+        text-align: left;
+        padding-left: 7px;
+      }
+      p{
+        text-align: left;
+      }
+    }
+    .buttons{
+      display: flex;
+      align-items: center;
+      width: 30%;
+      margin-right: 5%;
+      button:nth-of-type(1){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-bottom: 0;
+        i{
+          margin-top: 0.4rem;
+          padding-left: 0.6rem;
+        }
+      }
+      button:nth-of-type(2){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-bottom: 0;
+        i{
+          margin-top: 0.4rem;
+          padding-left: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px){
+    section.maxWidth{
+      width: 80%;
+      height: 50vh;
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: row;
+      .text{
+        padding: 3rem 0;
+        width: 60%;
+        margin-left: 5%;
+        h3{
+          font-size: 4.4rem;
+          text-align: left;
+          padding-left: 7px;
+          margin-bottom: 1.5rem;
+        }
+        p{
+          font-size: 2rem;
+          padding-right: 1.2rem;
+          text-align: left;
+          margin-bottom: 1.5rem;
+        }
+      }
+      .buttons{
+        width: 30%;
+        height: 70%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        button:nth-of-type(1){
+          height: 30%;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          margin-bottom: 0;
+          font-size: 1.8rem;
+          i{
+            margin-top: 0.4rem;
+            padding-left: 0.6rem;
+          }
+        }
+        button:nth-of-type(2){
+          height: 30%;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          margin-bottom: 0;
+          font-size: 1.8rem;
+          i{
+            margin-top: 0.4rem;
+            padding-left: 0.6rem;
+          }
+        }
+      }
+    }
+}

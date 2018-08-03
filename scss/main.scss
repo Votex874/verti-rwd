@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script:400%7COpen+Sans:300,300italic,600,600italic,800");
+@import "partials/header";
+@import "partials/reset";
+@import "partials/section1";
+@import "partials/section2";
+@import "partials/section3";
+@import "partials/section4";
+
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: #E4E4E4;
+    color: #444444;
+  h2{
+    font-family: "Oleo Script", sans-serif;
+  }
+}
